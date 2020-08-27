@@ -7,7 +7,7 @@ import React from "react";
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-function Search() {
+function Search({ onChange }) {
   return (
     <div>
       <form className="form-inline">
@@ -16,10 +16,8 @@ function Search() {
           type="search"
           placeholder="Search"
           aria-label="Search"
+          onChange={onChange}
         />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
       </form>
     </div>
   );
