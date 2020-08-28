@@ -5,6 +5,7 @@ import Table from "./components/Table";
 import axios from "axios";
 
 function App() {
+  //state hook gives reference to setState which is later referenced
   const [state, setState] = React.useState({
     base: [],
     employees: [],
@@ -12,9 +13,9 @@ function App() {
 
   React.useEffect(() => {
     axios
-      .get("https://randomuser.me/api/?results=20")
+      .get("https://randomuser.me/api/?results=100")
       .then((response) => {
-        // console.log(response.data.results);
+        console.log(response.data.results);
         setState({
           employees: response.data.results,
           base: response.data.results,

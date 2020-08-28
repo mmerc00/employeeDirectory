@@ -1,41 +1,4 @@
 import React from "react";
-// function Table() {
-//   return (
-//     <div>
-//       <table class="table table-striped">
-//         <thead>
-//           <tr>
-//             <th scope="col">#</th>
-//             <th scope="col">First</th>
-//             <th scope="col">Last</th>
-//             <th scope="col">OfficeNumber</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           <tr>
-//             <th scope="row">1</th>
-//             <td>Mark</td>
-//             <td>Otto</td>
-//             <td>{</td>
-//           </tr>
-//           <tr>
-//             <th scope="row">2</th>
-//             <td>Jacob</td>
-//             <td>Thornton</td>
-//             <td>@fat</td>
-//           </tr>
-//           <tr>
-//             <th scope="row">3</th>
-//             <td>Larry</td>
-//             <td>the Bird</td>
-//             <td>@twitter</td>
-//           </tr>
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// }
-
 function Table({ employees }) {
   return (
     <table>
@@ -50,6 +13,10 @@ function Table({ employees }) {
       <tbody>
         {employees.map((employee, i) => (
           <tr key={i + "-employee"}>
+            <td>
+              <img src={employee.picture.large} alt={employee.name.first}></img>
+            </td>
+            <td></td>
             <td>
               {employee.name.first} {employee.name.last}
             </td>
