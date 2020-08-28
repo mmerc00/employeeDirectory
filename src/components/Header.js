@@ -1,7 +1,9 @@
 import React from "react";
+
 const headerStyle = {
-  span: {
+  title: {
     color: "lemonchiffon",
+    backgroundColor: "darkgray",
   },
 };
 

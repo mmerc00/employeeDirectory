@@ -1,30 +1,26 @@
 import React from "react";
-function Table({ employees }) {
+function Table({ employees, sortTable }) {
   return (
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>DOB</th>
-          <th>Location</th>
+          <th onClick={sortTable}>Img</th>
+          <th onClick={sortTable}>Name</th>
+          <th onClick={sortTable}>Email</th>
+          <th onClick={sortTable}>DOB</th>
+          <th onClick={sortTable}>Location</th>
         </tr>
       </thead>
       <tbody>
         {employees.map((employee, i) => (
           <tr key={i + "-employee"}>
             <td>
-              <img src={employee.picture.large} alt={employee.name.first}></img>
+              <img src={employee.img} alt={employee.name}></img>
             </td>
-            <td></td>
-            <td>
-              {employee.name.first} {employee.name.last}
-            </td>
+            <td>{employee.name}</td>
             <td>{employee.email}</td>
-            <td>{new Date(employee.dob.date).toLocaleDateString()}</td>
-            <td>
-              {employee.location.city}, {employee.location.state}
-            </td>
+            <td>{new Date(employee.dob).toLocaleDateString()}</td>
+            <td>{employee.location}</td>
           </tr>
         ))}
       </tbody>
