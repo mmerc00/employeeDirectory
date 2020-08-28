@@ -1,17 +1,21 @@
 import React from "react";
 
 const headerStyle = {
-  title: {
-    color: "lemonchiffon",
-    backgroundColor: "darkgray",
+  div: {
+    backgroundColor: "opal",
+    paddingTop: 30,
+    fontFamily: "Times New Roman",
+    border: 5,
+    paddingBottom: 30,
+    fontSize: 30,
   },
 };
 
 function Header() {
   return (
     <div>
-      <nav className="navbar navbar-light justify-content-center bg-light">
-        <span className="navbar-brand mb-0 h1" style={headerStyle.title}>
+      <nav className="navbar justify-content-center">
+        <span className="navbar-brand mb-0 h1" style={headerStyle.div}>
           Employee Search
         </span>
       </nav>

@@ -1,4 +1,15 @@
 import React from "react";
+
+// const tableStyle = {
+//   th: {
+//     color: "black",
+//     // backgroundColor: "darkgray",
+//     paddingTop: 30,
+//     fontFamily: "Times New Roman",
+//     paddingBottom: 20,
+//     fontSize: 30,
+//   },
+// };
 function Table({ employees, sortTable }) {
   return (
     <table>
